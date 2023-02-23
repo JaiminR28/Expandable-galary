@@ -1,4 +1,16 @@
 "use strict";
+//  Image Card expansion code
+
+const imgCardEl = document.querySelectorAll(".img-card");
+imgCardEl.forEach((Element) => {
+	Element.addEventListener("click", function (e) {
+		// Remove active class
+		imgCardEl.forEach((el) => {
+			el.classList.remove("active");
+		});
+		Element.classList.add("active");
+	});
+});
 
 //Setup
 var fsmActual = document.createElement("div");
